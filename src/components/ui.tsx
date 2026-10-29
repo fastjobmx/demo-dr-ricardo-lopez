@@ -110,9 +110,9 @@ export function DoctorPortrait({ className = "" }: { className?: string }) {
       <div className="absolute left-1/2 top-[6%] -z-10 aspect-square w-[78%] -translate-x-1/2 rounded-full border border-champagne/40" aria-hidden />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-petrol/10 to-transparent" aria-hidden />
       <picture>
-        <source srcSet="/images/dr-ricardo-lopez.webp" type="image/webp" />
+        <source srcSet={`${import.meta.env.BASE_URL}images/dr-ricardo-lopez.webp`} type="image/webp" />
         <img
-          src="/images/dr-ricardo-lopez.png"
+          src={`${import.meta.env.BASE_URL}images/dr-ricardo-lopez.png`}
           alt="Dr. Ricardo López Pérez, sofrólogo e hipnoterapeuta"
           width={310}
           height={566}
