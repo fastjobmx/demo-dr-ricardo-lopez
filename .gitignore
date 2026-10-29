@@ -1,0 +1,6 @@
+node_modules
+dist
+*.zip
+.claude
+demo-dr-ricardo-lopez/
+*.tsbuildinfo

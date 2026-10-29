@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-ivory font-sans text-petrol antialiased; font-variant-numeric: lining-nums; }
+  ::selection { background: #E9DED0; color: #173D3A; }
+  h1, h2, h3, h4 { @apply font-serif; font-weight: 500; letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid #B99B75; outline-offset: 3px; border-radius: 2px; }
+  [id] { scroll-margin-top: 6rem; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+@layer components {
+  .eyebrow { @apply text-[0.7rem] font-medium uppercase tracking-eyebrow text-champagne-dark; }
+  .display { @apply font-serif text-[2.6rem] leading-[1.02] sm:text-6xl lg:text-[5.2rem]; }
+  .h2 { @apply font-serif text-[2.15rem] leading-[1.08] sm:text-5xl lg:text-[3.6rem]; }
+  .lead { @apply text-[1.02rem] leading-relaxed text-slate sm:text-lg; }
+  .hairline { @apply h-px w-full bg-petrol/15; }
+  .btn { @apply inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-full px-7 text-[0.92rem] font-medium tracking-wide transition-all duration-300; }
+  .btn-primary { @apply btn bg-petrol text-ivory hover:bg-petrol-deep hover:shadow-[0_12px_30px_-12px_rgba(23,61,58,0.6)]; }
+  .btn-ghost { @apply btn border border-petrol/25 text-petrol hover:border-petrol hover:bg-petrol hover:text-ivory; }
+  .btn-light { @apply btn bg-ivory text-petrol hover:bg-sand; }
+  .btn-outline-light { @apply btn border border-ivory/30 text-ivory hover:border-champagne hover:text-champagne; }
+  .link-arrow { @apply inline-flex items-center gap-2 text-sm font-medium text-petrol underline-offset-[6px] decoration-champagne transition-colors hover:text-champagne-dark hover:underline; }
+}
